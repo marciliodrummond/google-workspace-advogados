@@ -49,8 +49,8 @@ export function Hero({ onStart }: HeroProps) {
           style={{ animation: 'fadeUp 0.8s ease 0.35s both' }}
         >
           {[
-            { icon: Layers, value: '10', label: 'Secoes' },
-            { icon: BookOpen, value: '90+', label: 'Tutoriais' },
+            { icon: Layers, value: '11', label: 'Secoes' },
+            { icon: BookOpen, value: '100+', label: 'Tutoriais' },
             { icon: Zap, value: '25+', label: 'Templates' },
             { icon: Building2, value: '4', label: 'Niveis' },
           ].map((m, i) => (

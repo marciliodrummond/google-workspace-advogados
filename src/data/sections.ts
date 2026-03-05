@@ -2554,7 +2554,389 @@ Isso sem contar a produtividade extra da integração nativa entre as ferramenta
     ],
   },
   // ═══════════════════════════════════════════════════════════
-  // SEÇÃO 10: RECURSOS E REFERÊNCIAS
+  // SEÇÃO 10: ESCRITÓRIO DIGITAL COM GOOGLE WORKSPACE
+  // ═══════════════════════════════════════════════════════════
+  {
+    id: 'escritorio-digital',
+    title: 'Escritório Digital',
+    description: 'Como todas as ferramentas se integram para criar seu escritório digital completo',
+    icon: 'building',
+    cards: [
+      {
+        title: 'Seu Escritório Digital: A Visão Completa',
+        subtitle: 'Como o Google Workspace substitui toda a infraestrutura física do escritório',
+        level: 'iniciante',
+        icon: 'building',
+        analogy: {
+          tag: 'O Prédio Digital',
+          text: 'Imagine que o Google Workspace é o **prédio comercial completo** do seu escritório de advocacia. Cada ferramenta é um andar ou sala com função específica, mas todas conectadas pelo mesmo elevador (sua conta Google). A diferença? Este prédio cabe no seu bolso, funciona 24h, e você acessa de qualquer lugar do mundo.',
+        },
+        content: `Muitos advogados usam Gmail, talvez Drive, e param por aí. Mas o Google Workspace tem **mais de 15 ferramentas** que, juntas, substituem toda a infraestrutura física e digital de um escritório tradicional.
+
+O segredo não está em cada ferramenta isolada — está na **integração entre elas**. Quando um cliente preenche um formulário (Forms), os dados vão para uma planilha (Sheets), disparam um email (Gmail), criam um evento no calendário (Calendar) e geram uma pasta de caso no Drive. Tudo automático.
+
+Este é o poder do escritório digital: **menos trabalho manual, menos erro humano, mais tempo para advogar**.`,
+        refTable: [
+          { icon: 'mail', element: 'Gmail', analogy: 'Recepção e Correspondência', config: 'sim', configLabel: 'Domínio .adv.br' },
+          { icon: 'hard-drive', element: 'Google Drive', analogy: 'Arquivo Central e Cofre', config: 'sim', configLabel: 'Estrutura de pastas' },
+          { icon: 'file-text', element: 'Google Docs', analogy: 'Sala de Redação de Petições', config: 'auto', configLabel: 'Templates prontos' },
+          { icon: 'table', element: 'Google Sheets', analogy: 'Departamento Financeiro', config: 'sim', configLabel: 'Planilha de honorários' },
+          { icon: 'presentation', element: 'Google Slides', analogy: 'Sala de Sustentação Oral', config: 'auto', configLabel: 'Modelos jurídicos' },
+          { icon: 'video', element: 'Google Meet', analogy: 'Sala de Audiências Virtual', config: 'auto', configLabel: 'Integrado ao Calendar' },
+          { icon: 'calendar', element: 'Google Calendar', analogy: 'Quadro de Prazos e Audiências', config: 'sim', configLabel: 'Alertas configurados' },
+          { icon: 'message-circle', element: 'Google Chat', analogy: 'Comunicação Interna da Equipe', config: 'sim', configLabel: 'Espaços por área' },
+          { icon: 'clipboard', element: 'Google Forms', analogy: 'Formulário de Intake do Cliente', config: 'sim', configLabel: 'Integrado ao Sheets' },
+          { icon: 'globe', element: 'Google Sites', analogy: 'Fachada e Vitrine do Escritório', config: 'sim', configLabel: 'Site institucional' },
+          { icon: 'settings', element: 'Admin Console', analogy: 'Portaria com Segurança 24h', config: 'sim', configLabel: 'Políticas e acessos' },
+          { icon: 'shield', element: 'Google Vault', analogy: 'Cofre de Compliance e eDiscovery', config: 'sim', configLabel: 'Business Plus+' },
+          { icon: 'smartphone', element: 'AppSheet', analogy: 'Recepcionista Digital (app no-code)', config: 'sim', configLabel: 'Apps personalizados' },
+          { icon: 'code', element: 'Apps Script', analogy: 'Estagiário que Automatiza Tudo', config: 'sim', configLabel: 'Scripts sob medida' },
+          { icon: 'sparkles', element: 'Gemini AI', analogy: 'Assistente Jurídico com IA', config: 'auto', configLabel: 'Integrado nas ferramentas' },
+          { icon: 'book-open', element: 'NotebookLM', analogy: 'Biblioteca de Pesquisa Jurídica', config: 'auto', configLabel: 'Gratuito' },
+        ],
+        tips: [
+          'Comece ativando Gmail + Drive + Calendar — já resolve 70% das necessidades',
+          'Na segunda semana, adicione Docs + Sheets para documentos e finanças',
+          'No primeiro mês, explore Forms, Sites e as automações',
+          'O Gemini AI e NotebookLM são gratuitos e já dão superpoderes de pesquisa',
+        ],
+      },
+      {
+        title: 'A Jornada do Cliente: Do Intake ao Caso Encerrado',
+        subtitle: 'Fluxo completo mostrando como cada ferramenta entra no momento certo',
+        level: 'intermediario',
+        icon: 'workflow',
+        content: `Acompanhe a jornada completa de um cliente pelo seu escritório digital. Cada etapa usa uma ferramenta do Google Workspace de forma natural e integrada:`,
+        flowSteps: [
+          { title: '1. Cliente encontra o escritório', description: 'Google Sites: site institucional com formulário de contato integrado, aparecendo no Google com SEO configurado' },
+          { title: '2. Preenche formulário de intake', description: 'Google Forms: questionário personalizado coleta dados do cliente e do caso. Respostas vão direto para o Sheets' },
+          { title: '3. Equipe é notificada', description: 'Gmail: notificação automática chega ao responsável por triagem. Apps Script pode distribuir por área de atuação' },
+          { title: '4. Reunião inicial agendada', description: 'Google Calendar: evento criado com link do Meet, convite ao cliente, e lembrete 24h antes por email' },
+          { title: '5. Reunião de consulta', description: 'Google Meet: videoconferência profissional com gravação (autorizada), transcrição pelo Gemini, e notas no Docs' },
+          { title: '6. Pasta do caso criada', description: 'Google Drive: pasta estruturada com subpastas (Documentos Cliente, Petições, Comunicações, Prazos)' },
+          { title: '7. Documentos recebidos e organizados', description: 'Drive + Gemini: cliente envia documentos por email → salvos no Drive → Gemini resume automaticamente' },
+          { title: '8. Pesquisa jurídica', description: 'NotebookLM: upload de legislação e jurisprudência, criação de resumos, identificação de precedentes relevantes' },
+          { title: '9. Petição redigida', description: 'Google Docs: petição colaborativa com revisão em tempo real, sugestões do Gemini, e versionamento automático' },
+          { title: '10. Prazos controlados', description: 'Google Calendar + Sheets: prazo cadastrado com alerta D-5, D-3 e D-1. Dashboard mostra todos os prazos pendentes' },
+          { title: '11. Comunicação com cliente', description: 'Gmail: atualizações por email com templates prontos. Chat interno para alinhar equipe antes de responder' },
+          { title: '12. Caso encerrado e arquivado', description: 'Drive + Vault: documentos movidos para pasta "Encerrados", Vault garante retenção legal por tempo definido' },
+        ],
+        tips: [
+          'Esse fluxo funciona para qualquer tipo de caso: cível, trabalhista, família, empresarial',
+          'Configure uma vez e todos os novos casos seguem o mesmo padrão',
+          'Apps Script pode automatizar a criação de pastas e distribuição de tarefas',
+          'O Gemini transcreve reuniões do Meet e resume documentos — economiza horas',
+        ],
+      },
+      {
+        title: 'O Dia a Dia do Advogado Digital',
+        subtitle: 'Como as ferramentas se encaixam na rotina de trabalho',
+        level: 'iniciante',
+        icon: 'clock',
+        content: `Veja como um advogado que domina o Google Workspace organiza seu dia de trabalho. Cada momento do dia usa uma combinação de ferramentas que se conversam:
+
+**7:30 — Início do dia (Gmail + Calendar)**
+Abre o Gmail no celular. Vê os emails importantes marcados como prioritários. Confere o Calendar: duas reuniões, um prazo vencendo amanhã, audiência virtual às 14h.
+
+**8:00 — No escritório (Drive + Docs)**
+Abre a petição que está redigindo no Docs. O colega fez comentários ontem à noite — responde e ajusta. Gemini sugere melhorias na argumentação.
+
+**9:30 — Reunião com cliente (Meet + Docs)**
+Entra no Meet direto pelo Calendar. Compartilha tela mostrando o andamento no Docs. Faz anotações em tempo real que o cliente acompanha.
+
+**11:00 — Pesquisa jurídica (NotebookLM)**
+Precisa de jurisprudência sobre um tema específico. Abre o NotebookLM, carrega 5 acórdãos e pede um resumo comparativo. Em 5 minutos tem a análise que levaria 2 horas.
+
+**12:00 — Gestão financeira (Sheets)**
+Confere o dashboard de honorários. Identifica 3 parcelas em atraso. O Sheets tem alerta configurado — já sabia, mas agora vai disparar a cobrança.
+
+**14:00 — Audiência virtual (Meet + Slides)**
+Audiência de conciliação por videoconferência. Apresenta proposta usando Slides com gráficos do Sheets. Gravação autorizada salva automaticamente no Drive.
+
+**16:00 — Comunicação interna (Chat)**
+Alinha com a equipe no Chat sobre novos casos. Compartilha link do Docs com minutas para revisão. Cria tarefa no Tasks para acompanhar.
+
+**17:30 — Encerramento (Calendar + Tasks)**
+Revisa tarefas pendentes no Tasks. Confere compromissos de amanhã no Calendar. Responde últimos emails urgentes.`,
+        tips: [
+          'Instale o app do Gmail e Calendar no celular para começar o dia já conectado',
+          'Use o status do Chat para indicar quando está em audiência ou reunião',
+          'O Drive para Desktop sincroniza tudo automaticamente — trabalhe offline quando precisar',
+          'O Gemini funciona dentro do Gmail, Docs, Sheets e Meet — não precisa trocar de app',
+        ],
+      },
+      {
+        title: 'Integrações que Multiplicam Produtividade',
+        subtitle: 'As conexões invisíveis entre as ferramentas que economizam horas',
+        level: 'intermediario',
+        icon: 'link',
+        content: `O maior poder do Google Workspace não é cada ferramenta individualmente — é a **integração nativa** entre elas. Diferente de ferramentas separadas que precisam de plugins, aqui tudo se conecta automaticamente.`,
+        elementGrid: [
+          {
+            icon: 'mail',
+            name: 'Gmail + Drive',
+            description: 'Anexos grandes viram links do Drive automaticamente. Salve anexos recebidos direto no Drive com um clique.',
+            whenToUse: 'Todo email com arquivo: contratos, procurações, petições',
+          },
+          {
+            icon: 'calendar',
+            name: 'Calendar + Meet',
+            description: 'Todo evento no Calendar gera link do Meet automaticamente. Lembrete por email com link de acesso.',
+            whenToUse: 'Audiências virtuais, reuniões com clientes, alinhamentos',
+          },
+          {
+            icon: 'file-text',
+            name: 'Docs + Gemini',
+            description: 'Gemini sugere texto, resume documentos e corrige argumentação diretamente dentro do Docs.',
+            whenToUse: 'Redação de petições, revisão de contratos, pareceres',
+          },
+          {
+            icon: 'table',
+            name: 'Forms + Sheets',
+            description: 'Respostas do Forms populam o Sheets em tempo real. Use como CRM de clientes ou controle de processos.',
+            whenToUse: 'Intake de clientes, pesquisas de satisfação, controle de casos',
+          },
+          {
+            icon: 'sparkles',
+            name: 'Meet + Gemini',
+            description: 'Gemini transcreve reuniões, gera resumo e lista ações pendentes. Tudo salvo automaticamente no Drive.',
+            whenToUse: 'Audiências, reuniões com cliente, brainstorm de estratégia',
+            highlight: true,
+          },
+          {
+            icon: 'hard-drive',
+            name: 'Drive + Vault',
+            description: 'Vault preserva e busca conteúdo do Drive, Gmail e Chat. Essencial para eDiscovery e compliance.',
+            whenToUse: 'Retenção legal, compliance LGPD, auditorias internas',
+          },
+          {
+            icon: 'zap',
+            name: 'Sheets + Apps Script',
+            description: 'Scripts automatizam planilhas: alertas de prazo, relatórios automáticos, envio de emails em massa.',
+            whenToUse: 'Controle de prazos, alertas financeiros, relatórios recorrentes',
+          },
+          {
+            icon: 'smartphone',
+            name: 'AppSheet + Sheets',
+            description: 'Crie apps mobile a partir de planilhas. App de controle de processos, registro de horas, checklist.',
+            whenToUse: 'Registro de atividades em campo, controle de diligências',
+          },
+          {
+            icon: 'message-circle',
+            name: 'Chat + Drive + Calendar',
+            description: 'Compartilhe arquivos no Chat, agende reuniões sem sair da conversa, crie tarefas a partir de mensagens.',
+            whenToUse: 'Comunicação de equipe, alinhamentos rápidos, delegação',
+          },
+        ],
+        tips: [
+          'Essas integrações são nativas — não precisa instalar nada extra',
+          'A maioria funciona com qualquer plano do Google Workspace',
+          'Gemini nas ferramentas requer plano com Gemini (Standard+) ou uso da versão gratuita separada',
+          'AppSheet e Apps Script são ferramentas de automação avançada — explore após dominar o básico',
+        ],
+      },
+      {
+        title: 'Quanto Custa vs. Quanto Economiza',
+        subtitle: 'O ROI real de cada ferramenta comparada com alternativas tradicionais',
+        level: 'iniciante',
+        icon: 'trending-up',
+        content: `O Google Workspace Business Starter custa R$ 33,60/mês por usuário. Parece caro? Veja o que você **deixa de pagar** ao adotar:`,
+        relationship: {
+          title: 'Custo-Benefício por Ferramenta',
+          items: [
+            { label: 'Gmail + domínio .adv.br', value: 'Substitui: Locaweb, UOL Host', sub: 'Economia: ~R$ 30/mês', highlight: true },
+            { label: 'Google Drive (30GB-5TB)', value: 'Substitui: Dropbox, OneDrive avulso', sub: 'Economia: ~R$ 35/mês' },
+            { label: 'Google Docs/Sheets/Slides', value: 'Substitui: Microsoft Office', sub: 'Economia: ~R$ 45/mês' },
+            { label: 'Google Meet', value: 'Substitui: Zoom Pro', sub: 'Economia: ~R$ 55/mês' },
+            { label: 'Google Calendar', value: 'Substitui: Calendly + agenda avulsa', sub: 'Economia: ~R$ 40/mês' },
+            { label: 'Google Forms', value: 'Substitui: Typeform, JotForm', sub: 'Economia: ~R$ 50/mês' },
+            { label: 'Google Sites', value: 'Substitui: Wix, WordPress básico', sub: 'Economia: ~R$ 40/mês' },
+            { label: 'Google Chat', value: 'Substitui: Slack', sub: 'Economia: ~R$ 30/mês' },
+            { label: 'Admin Console + Segurança', value: 'Substitui: antivírus + MDM', sub: 'Economia: ~R$ 25/mês' },
+          ],
+          symbols: ['='],
+        },
+        content: `O Google Workspace Business Starter custa R$ 33,60/mês por usuário. Parece caro? Veja o que você **deixa de pagar** ao adotar:
+
+**Resumo financeiro:**
+- **Investimento:** R$ 33,60/mês (1 usuário, Starter)
+- **Economia estimada:** R$ 350+/mês em ferramentas separadas
+- **ROI:** mais de 10x o investimento no primeiro mês
+
+Para 5 advogados no Business Standard (R$ 67,20/mês):
+- **Investimento:** R$ 336/mês (5 × R$ 67,20)
+- **Economia:** R$ 1.750+/mês vs. ferramentas separadas
+- **Bônus:** Gemini AI incluído, 2TB por usuário, gravação no Meet
+
+A conta é simples: **uma única assinatura substitui 8-10 ferramentas pagas separadamente**.`,
+        tips: [
+          'O plano Starter (R$ 33,60) já inclui Gmail, Drive, Docs, Sheets, Slides, Meet, Calendar, Chat, Forms e Sites',
+          'O Standard (R$ 67,20) adiciona Gemini AI, 2TB e gravação no Meet — o mais popular para escritórios',
+          'O Business Plus (R$ 100,80) é obrigatório se precisar de Vault e eDiscovery',
+          'Desconto de até 10% para pagamento anual',
+        ],
+      },
+      {
+        title: 'Do Zero ao Digital em 30 Dias',
+        subtitle: 'Roadmap semanal para transformar seu escritório',
+        level: 'intermediario',
+        icon: 'map',
+        content: `Transformar um escritório tradicional em digital não acontece da noite para o dia. Este plano de 30 dias garante uma transição suave e sem estresse:`,
+        flowSteps: [
+          { title: 'Semana 1 — Fundação', description: 'Contratar plano, registrar domínio .adv.br, criar contas, configurar Admin Console, migrar emails existentes. Resultado: email profissional funcionando.' },
+          { title: 'Semana 2 — Comunicação', description: 'Configurar assinaturas profissionais, criar filtros e marcadores no Gmail, agendar compromissos no Calendar, fazer primeira reunião no Meet. Resultado: comunicação 100% digital.' },
+          { title: 'Semana 3 — Documentos', description: 'Organizar estrutura de pastas no Drive, criar templates de petição e contrato no Docs, configurar planilha financeira no Sheets. Resultado: documentos organizados e acessíveis.' },
+          { title: 'Semana 4 — Automação', description: 'Criar formulário de intake no Forms, publicar site no Sites, configurar alertas de prazo, explorar Gemini AI e NotebookLM. Resultado: escritório digital completo e automatizado.' },
+        ],
+        checklist: [
+          {
+            title: 'Semana 1 — Checklist',
+            items: [
+              'Escolher plano (Starter, Standard ou Plus)',
+              'Registrar domínio .adv.br (Registro.br)',
+              'Ativar Google Workspace e verificar domínio',
+              'Criar contas para todos os membros',
+              'Configurar 2FA para todas as contas',
+              'Migrar emails do provedor anterior',
+              'Baixar apps Gmail e Drive no celular',
+            ],
+          },
+          {
+            title: 'Semana 2 — Checklist',
+            items: [
+              'Criar assinatura profissional no Gmail',
+              'Configurar 5+ marcadores por área',
+              'Criar filtros para emails recorrentes',
+              'Adicionar todos os prazos no Calendar',
+              'Fazer primeira videoconferência no Meet',
+              'Configurar Google Chat com a equipe',
+              'Definir horários de atendimento no Calendar',
+            ],
+          },
+          {
+            title: 'Semana 3 — Checklist',
+            items: [
+              'Criar estrutura de pastas no Drive',
+              'Definir convenção de nomenclatura',
+              'Criar template de petição no Docs',
+              'Criar template de contrato no Docs',
+              'Montar planilha de honorários no Sheets',
+              'Configurar compartilhamento seguro',
+              'Testar edição colaborativa com colega',
+            ],
+          },
+          {
+            title: 'Semana 4 — Checklist',
+            items: [
+              'Criar formulário de intake no Forms',
+              'Publicar site institucional no Sites',
+              'Configurar alertas de prazo D-5/D-3/D-1',
+              'Experimentar Gemini no Gmail e Docs',
+              'Criar notebook no NotebookLM com legislação',
+              'Treinar equipe nos processos novos',
+              'Documentar fluxos e compartilhar no Drive',
+            ],
+          },
+        ],
+        tips: [
+          'Não tente fazer tudo no primeiro dia — siga o plano semana por semana',
+          'Delegue a configuração técnica do Admin Console para alguém com perfil de TI',
+          'A migração de emails pode ser feita gradualmente — mantenha o provedor antigo por 30 dias',
+          'Grave tutoriais curtos (no Meet) para treinar a equipe nos novos processos',
+        ],
+      },
+      {
+        title: 'Escritório Paperless: Eliminando o Papel',
+        subtitle: 'Como digitalizar processos e se livrar de armários físicos',
+        level: 'avancado',
+        icon: 'leaf',
+        content: `O escritório paperless não é só sobre escanear documentos — é sobre **repensar cada processo** que hoje depende de papel:
+
+**Documentos recebidos em papel:**
+1. Escaneie com o app do Google Drive (câmera do celular → PDF no Drive)
+2. Nomeie seguindo a convenção: AAAA-MM-DD_TipoDoc_Cliente
+3. Salve na pasta do caso no Drive
+4. O original físico vai para arquivo morto ou é devolvido ao cliente
+
+**Documentos que você produz:**
+- Petições → Google Docs (nunca mais Word)
+- Planilhas → Google Sheets (nunca mais Excel local)
+- Apresentações → Google Slides (nunca mais PowerPoint local)
+- Contratos → Google Docs com assinatura digital
+
+**Comunicação:**
+- Cartas → email profissional com Gmail
+- Telefonemas de follow-up → gravados e documentados no Meet
+- Recados → Google Chat com histórico pesquisável
+
+**Arquivo morto digital:**
+- Google Drive com pasta "Casos Encerrados" organizada por ano
+- Google Vault para retenção legal obrigatória
+- Busca instantânea em milhares de documentos vs. procurar em caixas
+
+**Benefícios mensuráveis:**
+- Economia de espaço físico (1 armário = ~R$ 200/mês de aluguel)
+- Busca em segundos vs. minutos/horas em arquivo físico
+- Acesso remoto de qualquer lugar
+- Backup automático (3 cópias em data centers diferentes)
+- Compliance facilitada com LGPD (rastreio de quem acessou cada documento)`,
+        tips: [
+          'O app do Drive escaneia documentos com OCR — texto pesquisável automaticamente',
+          'Mantenha originais físicos pelo prazo legal obrigatório e depois descarte',
+          'Configure regras de retenção no Vault para compliance automática',
+          'Treine a equipe para NUNCA salvar arquivos localmente — sempre no Drive',
+        ],
+      },
+      {
+        title: 'A Segurança do Escritório Digital',
+        subtitle: 'Por que seus dados estão mais seguros na nuvem do que no servidor local',
+        level: 'intermediario',
+        icon: 'shield',
+        content: `A objeção mais comum contra o escritório digital é: "meus dados estão seguros na nuvem?" A resposta curta: **muito mais seguros do que no seu computador local**.
+
+**Infraestrutura Google:**
+- Data centers com certificação ISO 27001, SOC 2/3
+- Criptografia em trânsito (TLS 1.3) e em repouso (AES-256)
+- 99,9% de uptime garantido em SLA
+- Redundância em múltiplos data centers geográficos
+- Equipe de segurança com milhares de engenheiros 24/7
+
+**Comparação realista:**
+
+Servidor local do escritório:
+- Sem backup automático (ou backup irregular em HD externo)
+- Vulnerável a ransomware, furto, incêndio, enchente
+- Sem criptografia (qualquer pessoa com acesso físico lê tudo)
+- Sem controle de acesso granular
+- Sem log de auditoria
+
+Google Workspace:
+- Backup automático com 3 cópias em locais diferentes
+- Imune a desastres físicos locais
+- Criptografia de ponta em todas as camadas
+- Controle granular: quem acessa o quê, quando e de onde
+- Logs completos de auditoria para compliance
+
+**Controles para advogados:**
+- 2FA obrigatória para toda a equipe
+- DLP impede envio acidental de dados sensíveis (CPF, CNPJ)
+- Admin pode revogar acesso instantaneamente (ex-funcionário)
+- Vault preserva dados mesmo se usuário excluir
+- MDM controla dispositivos perdidos ou roubados
+
+O risco real não é a nuvem — é o **notebook sem senha** do estagiário com centenas de processos.`,
+        tips: [
+          'Ative 2FA para TODAS as contas no primeiro dia — inegociável',
+          'Configure política de senha forte no Admin Console (mínimo 12 caracteres)',
+          'Use DLP para bloquear envio de CPF/CNPJ para emails externos',
+          'Revise logs de auditoria mensalmente para detectar acessos suspeitos',
+          'O Google Workspace atende todos os requisitos da LGPD com configuração correta',
+        ],
+      },
+    ],
+  },
+  // ═══════════════════════════════════════════════════════════
+  // SEÇÃO 11: RECURSOS E REFERÊNCIAS
   // ═══════════════════════════════════════════════════════════
   {
     id: 'recursos',

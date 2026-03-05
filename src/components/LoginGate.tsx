@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { KeyRound, AlertCircle, Eye, EyeOff, ArrowRight } from 'lucide-react'
 
-const ACCESS_KEY = '6114GW104Adv'
+const ACCESS_KEY = '9025GwAdv104'
 const STORAGE_KEY = 'si-gworkspace-advogados-auth'
 
 interface LoginGateProps {
