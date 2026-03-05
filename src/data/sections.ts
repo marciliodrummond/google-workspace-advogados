@@ -2740,7 +2740,6 @@ Revisa tarefas pendentes no Tasks. Confere compromissos de amanhã no Calendar. 
         subtitle: 'O ROI real de cada ferramenta comparada com alternativas tradicionais',
         level: 'iniciante',
         icon: 'trending-up',
-        content: `O Google Workspace Business Starter custa R$ 33,60/mês por usuário. Parece caro? Veja o que você **deixa de pagar** ao adotar:`,
         relationship: {
           title: 'Custo-Benefício por Ferramenta',
           items: [
