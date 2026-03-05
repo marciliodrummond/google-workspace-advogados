@@ -117,6 +117,12 @@ Para escritórios de advocacia, isso significa: email com domínio .adv.br, arma
           'Todas as ferramentas funcionam no navegador — não precisa instalar nada',
           'Os dados ficam na nuvem com backup automático — sem risco de perder arquivos',
           'A integração entre as ferramentas é nativa: um evento no Calendar já cria link do Meet automaticamente',
+          'Em 15 minutos você configura email profissional + agenda + armazenamento',
+        ],
+        links: [
+          { label: 'Google Workspace — Site Oficial', url: 'https://workspace.google.com/intl/pt-BR/' },
+          { label: 'Teste Grátis 14 Dias', url: 'https://workspace.google.com/intl/pt-BR/pricing.html' },
+          { label: 'Central de Ajuda', url: 'https://support.google.com/a/?hl=pt-BR' },
         ],
       },
       {
@@ -158,6 +164,9 @@ Para escritórios de advocacia, isso significa: email com domínio .adv.br, arma
           ],
           symbols: ['→', '→', '→'],
         },
+        links: [
+          { label: 'Comparar planos Google Workspace', url: 'https://workspace.google.com/intl/pt-BR/pricing.html' },
+        ],
       },
       {
         title: 'Registrando seu Domínio .adv.br',
@@ -217,6 +226,10 @@ O registro é feito no **Registro.br** (entidade responsável por domínios bras
           'Se tiver dificuldade com DNS, o suporte do Google ajuda gratuitamente durante a configuração',
           'Guarde as credenciais de administrador em local seguro — esse acesso controla todo o escritório',
         ],
+        links: [
+          { label: 'Google Workspace - Começar', url: 'https://workspace.google.com/intl/pt-BR/pricing.html' },
+          { label: 'Ajuda do Google Workspace Admin', url: 'https://support.google.com/a/?hl=pt-BR' },
+        ],
       },
       {
         title: 'Configuração Inicial do Admin Console',
@@ -245,6 +258,10 @@ O Admin Console tem mais de 200 configurações. Não tente ajustar tudo de uma 
         tips: [
           'Adicione um segundo administrador como backup — nunca tenha apenas um',
           'Ative alertas de segurança para receber notificações de atividades suspeitas',
+        ],
+        links: [
+          { label: 'Admin Console do Google Workspace', url: 'https://admin.google.com' },
+          { label: 'Ajuda do Admin Console', url: 'https://support.google.com/a/?hl=pt-BR' },
         ],
       },
       {
@@ -414,6 +431,9 @@ O Gmail do Workspace é visualmente idêntico ao Gmail pessoal, então a curva d
           'Use a estrela amarela para marcar emails que precisam de ação',
           'O atalho **E** arquiva emails rapidamente (ativa em Configurações > Atalhos de teclado)',
         ],
+        links: [
+          { label: 'Central de Ajuda do Gmail', url: 'https://support.google.com/mail/?hl=pt-BR' },
+        ],
       },
       {
         title: 'Assinaturas de Email Jurídicas',
@@ -445,6 +465,9 @@ AVISO DE CONFIDENCIALIDADE: Esta mensagem pode conter informações confidenciai
           'Mantenha a assinatura limpa — evite muitas cores, fontes ou imagens grandes',
           'Crie duas assinaturas: uma completa (para novos contatos) e uma reduzida (para respostas)',
           'O disclaimer de confidencialidade é recomendado pela OAB',
+        ],
+        links: [
+          { label: 'Central de Ajuda do Gmail', url: 'https://support.google.com/mail/?hl=pt-BR' },
         ],
       },
       {
@@ -515,6 +538,10 @@ AVISO DE CONFIDENCIALIDADE: Esta mensagem pode conter informações confidenciai
           'Use "Prazo fatal" como prefixo no título do evento para destaque visual',
           'Ative notificações por email além das notificações push no celular',
         ],
+        links: [
+          { label: 'Central de Ajuda do Google Calendar', url: 'https://support.google.com/calendar/?hl=pt-BR' },
+        ],
+        prompt: `Gemini, preciso organizar os prazos processuais do meu escritório de advocacia no Google Calendar. Crie uma estrutura de calendários com cores e regras de alerta para os seguintes tipos de prazo: contestação (15 dias), recurso (15 dias), impugnação (15 dias), audiência, e reunião com cliente. Para cada tipo, sugira a cor ideal, os alertas recomendados (em dias e horas antes), e um modelo de título padronizado para o evento.`,
       },
       {
         title: 'Google Meet para Audiências Virtuais',
@@ -541,6 +568,10 @@ O Meet funciona diretamente no navegador, sem instalar nada. Basta enviar o link
           'Mantenha o microfone no mudo quando não estiver falando',
           'Tenha um plano B: número de telefone para entrar na reunião por ligação',
         ],
+        links: [
+          { label: 'Central de Ajuda do Google Meet', url: 'https://support.google.com/meet/?hl=pt-BR' },
+        ],
+        prompt: `Gemini, crie um checklist completo de preparação para audiência virtual via Google Meet para um advogado. Inclua: verificações técnicas (câmera, microfone, internet, iluminação), preparação do ambiente (fundo, vestimenta), documentos que devem estar abertos na tela, configurações do Meet (gravação, legendas, sala de espera), e um plano de contingência caso haja problemas técnicos durante a audiência.`,
       },
       {
         title: 'Google Chat para Comunicação Interna',
@@ -728,6 +759,10 @@ OAB/[UF] [NÚMERO]`,
           'O atalho Ctrl+Shift+V cola texto sem formatação — essencial ao copiar de outras fontes',
           'Ative "Sugerir edições" (canto superior direito) para revisão por colegas sem alterar o original',
         ],
+        links: [
+          { label: 'Central de Ajuda do Google Docs', url: 'https://support.google.com/docs/?hl=pt-BR' },
+        ],
+        prompt: `Gemini, crie a estrutura completa de uma petição inicial no formato do Judiciário brasileiro usando Google Docs. Inclua: cabeçalho com endereçamento ao juízo, qualificação das partes, dos fatos, do direito, dos pedidos e do valor da causa. Use formatação ABNT: Times New Roman 12pt, espaçamento 1,5, margens superior e esquerda 3cm, inferior e direita 2cm, texto justificado. Marque com [CAMPO] os trechos que devem ser personalizados.`,
       },
       {
         title: 'Template de Contrato de Honorários',
@@ -1068,6 +1103,10 @@ Exemplo: \`2026-03-05_PeticaoInicial_SilvaJoao.docx\``,
           'Crie uma pasta "ARQUIVO MORTO" para processos encerrados — não exclua',
           'Compartilhe apenas as pastas necessárias — nem todos precisam ver tudo',
         ],
+        links: [
+          { label: 'Central de Ajuda do Google Drive', url: 'https://support.google.com/drive/?hl=pt-BR' },
+        ],
+        prompt: `Gemini, crie uma estrutura completa de pastas no Google Drive para um escritório de advocacia com 5 advogados. Inclua: pasta raiz do escritório, subpastas por cliente (com padrão de nomenclatura usando nome e CPF/CNPJ), subpastas por processo (com número CNJ), e pastas administrativas (financeiro, modelos, jurisprudência). Defina também uma convenção de nomes de arquivos no formato AAAA-MM-DD_TipoDocumento_NomeCliente.ext com exemplos práticos para petições, contratos, procurações e pareceres.`,
       },
       {
         title: 'Convenção de Nomes de Arquivos',
@@ -1134,6 +1173,9 @@ Formatação condicional para Status:
           'Proteja as fórmulas: Dados > Proteger planilhas e intervalos',
           'Use formatação condicional para destacar pagamentos em atraso (vermelho)',
           'Crie gráficos na aba Dashboard para visualizar tendências mensais',
+        ],
+        links: [
+          { label: 'Central de Ajuda do Google Sheets', url: 'https://support.google.com/docs/topic/9054603?hl=pt-BR' },
         ],
       },
       {
@@ -1221,6 +1263,9 @@ Formatação condicional para coluna F:
           'Para enviar documento a cliente: compartilhe como "Visualizador" com opção de download',
           'Revise periodicamente quem tem acesso a cada pasta: Drive > Gerenciar acesso',
           'Use Drives Compartilhados (Business Standard+) para arquivos que pertencem ao escritório, não a indivíduos',
+        ],
+        links: [
+          { label: 'Central de Ajuda do Google Drive', url: 'https://support.google.com/drive/?hl=pt-BR' },
         ],
       },
       {
@@ -1364,6 +1409,10 @@ Tarefas com data aparecem automaticamente no calendário, marcadas com um círcu
           'Use chave de segurança física para contas de administrador',
           'Para escritórios com mais de 10 pessoas, torne 2FA obrigatória via Admin Console',
         ],
+        links: [
+          { label: 'Ajuda de Segurança do Google Workspace', url: 'https://support.google.com/a/?hl=pt-BR' },
+          { label: 'Admin Console - Segurança', url: 'https://admin.google.com' },
+        ],
       },
       {
         title: 'Políticas de Senha no Admin Console',
@@ -1424,6 +1473,10 @@ O Google Workspace já fornece:
               'Documentar as bases legais utilizadas para cada tratamento',
             ],
           },
+        ],
+        links: [
+          { label: 'Privacidade e Segurança do Google Workspace', url: 'https://workspace.google.com/intl/pt-BR/pricing.html' },
+          { label: 'Ajuda do Google Workspace Admin', url: 'https://support.google.com/a/?hl=pt-BR' },
         ],
       },
       {
@@ -1639,6 +1692,10 @@ O app funciona no celular e computador, com sincronização em tempo real com o 
           'O AppSheet Core está incluído no Business Standard e Plus',
           'Consulte a galeria de templates do AppSheet para modelos prontos de gestão jurídica',
         ],
+        links: [
+          { label: 'Google AppSheet', url: 'https://about.appsheet.com/home/' },
+        ],
+        prompt: `Gemini, me ajude a planejar um aplicativo no AppSheet para gestão de processos jurídicos. Preciso de: cadastro de clientes, controle de processos com número, vara e status, acompanhamento de prazos com notificações, e registro de honorários. A base de dados será uma planilha do Google Sheets. Liste as colunas que preciso criar e as automações recomendadas.`,
       },
       {
         title: 'Apps Script - Automações Personalizadas',
@@ -1696,6 +1753,9 @@ function verificarPrazos() {
           'Use triggers (gatilhos) para executar scripts automaticamente em horários definidos',
           'Teste scripts em uma planilha de testes antes de usar em dados reais',
           'O ChatGPT e o Gemini são excelentes para gerar scripts de Apps Script',
+        ],
+        links: [
+          { label: 'Google Apps Script', url: 'https://developers.google.com/apps-script?hl=pt-br' },
         ],
       },
       {
@@ -1834,6 +1894,10 @@ Isso elimina horas de trabalho manual todo mês e garante que os relatórios sã
 **Zapier vs Make.com:**
 - **Zapier:** Mais fácil, mais caro, ideal para automações simples
 - **Make.com:** Mais barato, mais flexível, ideal para fluxos complexos`,
+        links: [
+          { label: 'Zapier', url: 'https://zapier.com/' },
+          { label: 'Make (Integromat)', url: 'https://www.make.com/' },
+        ],
       },
       {
         title: 'Workflow de Aprovação',
@@ -1888,6 +1952,9 @@ Isso elimina horas de trabalho manual todo mês e garante que os relatórios sã
           { icon: 'presentation', name: 'Gemini no Slides', description: 'Gera apresentações a partir de texto' },
           { icon: 'video', name: 'Gemini no Meet', description: 'Transcreve reuniões, gera resumos e ações' },
           { icon: 'message-circle', name: 'Gemini no Chat', description: 'Assistente de IA direto no Google Chat' },
+        ],
+        links: [
+          { label: 'Gemini', url: 'https://gemini.google.com/' },
         ],
       },
       {
@@ -2030,6 +2097,15 @@ A transcrição automática serve como registro da reunião. O resumo com pontos
         links: [
           { label: 'NotebookLM', url: 'https://notebooklm.google.com' },
         ],
+        prompt: `Analise todas as fontes carregadas neste notebook e responda:
+
+1. Quais são os principais dispositivos legais aplicáveis ao caso?
+2. Existe jurisprudência consolidada sobre este tema nos tribunais superiores?
+3. Quais são os argumentos mais fortes a favor e contra a tese do cliente?
+4. Identifique possíveis contradições entre as fontes carregadas.
+5. Sugira uma estratégia jurídica baseada exclusivamente nas fontes disponíveis.
+
+Cite os trechos exatos das fontes para fundamentar cada resposta.`,
       },
       {
         title: 'NotebookLM para Estudo de Caso',
@@ -2059,6 +2135,9 @@ A transcrição automática serve como registro da reunião. O resumo com pontos
 4. Quais são os fundamentos mais fortes para um recurso de apelação?
 
 Cite as páginas e trechos específicos dos documentos para cada resposta.`,
+        links: [
+          { label: 'NotebookLM', url: 'https://notebooklm.google.com' },
+        ],
       },
       {
         title: 'Limites e Boas Práticas com IA',
@@ -2137,6 +2216,9 @@ Cite as páginas e trechos específicos dos documentos para cada resposta.`,
 - Inserir dados de clientes em IA sem contrato de processamento adequado
 - Apresentar conteúdo de IA sem revisão como trabalho profissional
 - Citar jurisprudência sem verificar a fonte original`,
+        links: [
+          { label: 'OAB - Ordem dos Advogados do Brasil', url: 'https://www.oab.org.br/' },
+        ],
       },
       {
         title: 'Resolução 615/2025 do CNJ',
@@ -2157,6 +2239,9 @@ Cite as páginas e trechos específicos dos documentos para cada resposta.`,
 - Petições podem ser analisadas por IA dos tribunais antes do magistrado
 - Maior padronização de decisões em casos repetitivos
 - Necessidade de adaptar a argumentação considerando análise por IA`,
+        links: [
+          { label: 'CNJ - Conselho Nacional de Justiça', url: 'https://www.cnj.jus.br/' },
+        ],
       },
       {
         title: 'Uso Ético de IA Generativa',
@@ -2550,6 +2635,7 @@ A melhor defesa é tratar a IA como um estagiário: tudo que ela produz precisa 
 **Economia anual: R$ 10.728**
 
 Isso sem contar a produtividade extra da integração nativa entre as ferramentas. Um estudo do Google estima ganho de 20-30% de eficiência.`,
+        prompt: `Gemini, me ajude a calcular o ROI (retorno sobre investimento) do Google Workspace para meu escritório de advocacia. Temos [NÚMERO] advogados e [NÚMERO] funcionários administrativos. Atualmente pagamos separadamente por: email profissional (R$ [VALOR]/mês), armazenamento em nuvem (R$ [VALOR]/mês), videoconferência (R$ [VALOR]/mês), suite de escritório (R$ [VALOR]/mês). Calcule a economia mensal e anual comparando com o Google Workspace Business Standard, e inclua também o ganho estimado de produtividade.`,
       },
     ],
   },
@@ -2843,6 +2929,11 @@ A conta é simples: **uma única assinatura substitui 8-10 ferramentas pagas sep
           'A migração de emails pode ser feita gradualmente — mantenha o provedor antigo por 30 dias',
           'Grave tutoriais curtos (no Meet) para treinar a equipe nos novos processos',
         ],
+        links: [
+          { label: 'Google Workspace', url: 'https://workspace.google.com/intl/pt-BR/' },
+          { label: 'Central de Aprendizado', url: 'https://support.google.com/a/users/?hl=pt-BR' },
+          { label: 'Admin Console', url: 'https://admin.google.com' },
+        ],
       },
       {
         title: 'Escritório Paperless: Eliminando o Papel',
@@ -2931,6 +3022,12 @@ O risco real não é a nuvem — é o **notebook sem senha** do estagiário com 
           'Revise logs de auditoria mensalmente para detectar acessos suspeitos',
           'O Google Workspace atende todos os requisitos da LGPD com configuração correta',
         ],
+        links: [
+          { label: 'Google Workspace Security', url: 'https://workspace.google.com/intl/pt-BR/security/' },
+          { label: 'DLP no Google Workspace', url: 'https://support.google.com/a/answer/9646351?hl=pt-BR' },
+          { label: 'Google Vault', url: 'https://workspace.google.com/intl/pt-BR/products/vault/' },
+        ],
+        prompt: `Gemini, me ajude a criar uma política de segurança da informação para meu escritório de advocacia que usa Google Workspace. A política deve incluir: (1) regras de senha e autenticação em dois fatores; (2) política de compartilhamento de documentos no Drive; (3) regras de uso de dispositivos pessoais (BYOD); (4) procedimento para desligamento de funcionários; (5) regras de classificação de documentos (público, interno, confidencial, sigiloso). Formato em tópicos objetivos para ser impresso e fixado no escritório.`,
       },
     ],
   },
@@ -2951,11 +3048,11 @@ O risco real não é a nuvem — é o **notebook sem senha** do estagiário com 
         content: `Guarde estes links para referência rápida:`,
         links: [
           { label: 'Admin Console', url: 'https://admin.google.com' },
-          { label: 'Google Workspace Learning Center', url: 'https://support.google.com/a/users' },
+          { label: 'Google Workspace Learning Center', url: 'https://support.google.com/a/users/?hl=pt-BR' },
           { label: 'Status do Google Workspace', url: 'https://www.google.com/appsstatus' },
           { label: 'Google Workspace Updates Blog', url: 'https://workspaceupdates.googleblog.com' },
           { label: 'NotebookLM', url: 'https://notebooklm.google.com' },
-          { label: 'AppSheet', url: 'https://www.appsheet.com' },
+          { label: 'AppSheet', url: 'https://about.appsheet.com/home/' },
           { label: 'Google Workspace Marketplace', url: 'https://workspace.google.com/marketplace' },
           { label: 'Registro.br (domínios .adv.br)', url: 'https://registro.br' },
         ],
@@ -2998,6 +3095,9 @@ No Google Docs e Sheets, a maioria dos atalhos funciona por padrão. Pressione *
           { icon: 'lock', name: 'Bitwarden', description: 'Gerenciador de senhas gratuito e seguro para toda equipe' },
           { icon: 'search', name: 'Google Scholar Button', description: 'Busque artigos acadêmicos e jurídicos com um clique' },
         ],
+        links: [
+          { label: 'Chrome Web Store', url: 'https://chromewebstore.google.com/' },
+        ],
       },
       {
         title: 'Comunidade e Suporte',
@@ -3015,7 +3115,8 @@ Admin Console > menu lateral > Suporte > contato direto
 **Dica:** O suporte do Google Workspace é significativamente melhor que o do Gmail gratuito. Você tem atendimento dedicado por ser assinante.`,
         links: [
           { label: 'Central de Ajuda do Google Workspace', url: 'https://support.google.com/a' },
-          { label: 'Comunidade do Google Workspace', url: 'https://support.google.com/a/community' },
+          { label: 'Comunidade do Google Workspace', url: 'https://www.googlecloudcommunity.com/gc/Google-Workspace/ct-p/google-workspace' },
+          { label: 'Admin Console', url: 'https://admin.google.com' },
         ],
       },
       {
@@ -3058,6 +3159,9 @@ O Google geralmente lança funcionalidades primeiro para Early Adopters (program
 - Se já usa Gmail pessoal e quer simplicidade → **Google Workspace**
 - Se depende de macros de Excel ou formatação avançada de Word → **Microsoft 365**
 - Se quer o melhor custo-benefício → **Google Workspace** (mais barato e inclui IA)`,
+        links: [
+          { label: 'Google Workspace vs Microsoft 365', url: 'https://workspace.google.com/intl/pt-BR/landing/google-workspace-vs-microsoft-365/' },
+        ],
       },
       {
         title: 'Resolvendo Problemas Comuns',

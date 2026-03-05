@@ -1,8 +1,15 @@
 import { useState, useRef, useEffect } from 'react'
-import { ChevronDown, Copy, Check, ExternalLink, ArrowRight, Lightbulb, Terminal } from 'lucide-react'
+import { ChevronDown, Copy, Check, ExternalLink, ArrowRight, Lightbulb, Terminal, Trophy, Sparkles } from 'lucide-react'
 import { LevelBadge } from './LevelBadge'
 import { CardIcon, Icon } from './Icons'
 import type { Card } from '../data/sections'
+
+const levelAccentColors: Record<string, { border: string; bg: string; glow: string }> = {
+  iniciante: { border: '#22c55e', bg: 'rgba(34,197,94,0.08)', glow: 'rgba(34,197,94,0.15)' },
+  intermediario: { border: '#3b82f6', bg: 'rgba(59,130,246,0.08)', glow: 'rgba(59,130,246,0.15)' },
+  avancado: { border: '#a855f7', bg: 'rgba(168,85,247,0.08)', glow: 'rgba(168,85,247,0.15)' },
+  expert: { border: '#e2c074', bg: 'rgba(226,192,116,0.08)', glow: 'rgba(226,192,116,0.15)' },
+}
 
 interface ExpandableCardProps {
   card: Card
@@ -315,13 +322,19 @@ export function ExpandableCard({ card, isOpen, onToggle }: ExpandableCardProps) 
 
   return (
     <div
-      className="rounded-xl border transition-all duration-300"
+      className="rounded-xl border transition-all duration-300 overflow-hidden"
       style={{
         background: isOpen ? 'var(--bg-elevated)' : 'var(--bg-card)',
-        borderColor: isOpen ? 'var(--border-accent)' : 'var(--border-line)',
-        boxShadow: isOpen ? 'var(--gold-glow-sm)' : 'none',
+        borderColor: isOpen ? levelAccentColors[card.level]?.border || 'var(--border-accent)' : 'var(--border-line)',
+        boxShadow: isOpen ? `0 0 20px ${levelAccentColors[card.level]?.glow || 'rgba(66,133,244,0.12)'}` : 'none',
       }}
     >
+      {/* Color accent strip at top when open */}
+      {isOpen && (
+        <div className="h-[3px]" style={{
+          background: `linear-gradient(90deg, ${levelAccentColors[card.level]?.border || '#4285f4'}, transparent)`,
+        }} />
+      )}
       {/* -- Card header (always visible) -- */}
       <button
         onClick={onToggle}
@@ -541,17 +554,20 @@ export function ExpandableCard({ card, isOpen, onToggle }: ExpandableCardProps) 
               </div>
             )}
 
-            {/* -- Tips -- */}
+            {/* -- Tips / Practical victories -- */}
             {card.tips && card.tips.length > 0 && (
-              <div className="mt-4 rounded-lg p-3.5 border" style={{ background: 'rgba(66,133,244,0.04)', borderColor: 'var(--border-accent)' }}>
-                <h4 className="text-[11px] font-bold text-[var(--fg-accent)] uppercase tracking-[0.08em] mb-2.5 font-mono flex items-center gap-1.5">
-                  <Lightbulb className="w-3 h-3" />
-                  Dicas
+              <div className="mt-4 rounded-lg p-3.5 border" style={{
+                background: `linear-gradient(135deg, rgba(34,197,94,0.04), rgba(66,133,244,0.04))`,
+                borderColor: 'rgba(34,197,94,0.25)',
+              }}>
+                <h4 className="text-[11px] font-bold uppercase tracking-[0.08em] mb-2.5 font-mono flex items-center gap-1.5" style={{ color: '#22c55e' }}>
+                  <Trophy className="w-3 h-3" />
+                  Dicas Praticas
                 </h4>
                 <ul className="space-y-1.5">
                   {card.tips.map((tip, i) => (
                     <li key={i} className="flex gap-2.5 text-sm text-[var(--fg-secondary)] leading-relaxed">
-                      <span className="shrink-0 mt-[7px] w-1.5 h-1.5 rounded-full bg-[var(--fg-accent)] opacity-60" />
+                      <span className="shrink-0 mt-[5px] text-[10px]" style={{ color: '#22c55e' }}>✓</span>
                       <span dangerouslySetInnerHTML={{ __html: formatInline(tip) }} />
                     </li>
                   ))}
@@ -562,39 +578,49 @@ export function ExpandableCard({ card, isOpen, onToggle }: ExpandableCardProps) 
             {/* -- Flow Steps -- */}
             {card.flowSteps && card.flowSteps.length > 0 && (
               <div className="mt-5 rounded-lg p-3.5 border" style={{ background: 'var(--bg-surface)', borderColor: 'var(--border-accent)' }}>
-                <h4 className="text-[11px] font-bold text-[var(--fg-accent)] uppercase tracking-[0.08em] mb-3.5 font-mono">Fluxo Visual</h4>
+                <h4 className="text-[11px] font-bold text-[var(--fg-accent)] uppercase tracking-[0.08em] mb-3.5 font-mono flex items-center gap-1.5">
+                  <ArrowRight className="w-3 h-3" />
+                  Fluxo Visual
+                </h4>
                 <div className="flex flex-col gap-0">
-                  {card.flowSteps.map((fs, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <div className="flex flex-col items-center">
-                        <div className="w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0" style={{
-                          background: 'linear-gradient(135deg, var(--bg-accent), var(--bg-accent-hover))',
-                          color: 'var(--fg-on-accent)',
-                          boxShadow: '0 0 12px rgba(66,133,244,0.15)',
-                        }}>
-                          {i + 1}
+                  {card.flowSteps.map((fs, i) => {
+                    const stepColors = ['#4285f4', '#34a853', '#fbbc04', '#ea4335', '#4285f4', '#34a853', '#fbbc04', '#ea4335', '#4285f4', '#34a853', '#fbbc04', '#ea4335']
+                    const color = stepColors[i % stepColors.length]
+                    return (
+                      <div key={i} className="flex items-start gap-3">
+                        <div className="flex flex-col items-center">
+                          <div className="w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0" style={{
+                            background: color,
+                            color: '#fff',
+                            boxShadow: `0 0 12px ${color}33`,
+                          }}>
+                            {i + 1}
+                          </div>
+                          {i < card.flowSteps!.length - 1 && (
+                            <div className="w-px h-6 my-1" style={{ background: `linear-gradient(to bottom, ${color}, transparent)` }} />
+                          )}
                         </div>
-                        {i < card.flowSteps!.length - 1 && (
-                          <div className="w-px h-6 my-1" style={{ background: 'linear-gradient(to bottom, var(--fg-accent), transparent)' }} />
-                        )}
+                        <div className="pb-2 flex-1">
+                          <span className="text-sm font-semibold text-[var(--fg-primary)]">{fs.title}</span>
+                          <p className="text-xs text-[var(--fg-secondary)] mt-0.5 leading-relaxed" dangerouslySetInnerHTML={{ __html: formatInline(fs.description) }} />
+                        </div>
                       </div>
-                      <div className="pb-2">
-                        <span className="text-sm font-semibold text-[var(--fg-primary)]">{fs.title}</span>
-                        <p className="text-xs text-[var(--fg-secondary)] mt-0.5 leading-relaxed">{fs.description}</p>
-                      </div>
-                    </div>
-                  ))}
+                    )
+                  })}
                 </div>
               </div>
             )}
 
             {/* -- Prompt -- */}
             {card.prompt && (
-              <div className="mt-4 rounded-lg border overflow-hidden" style={{ borderColor: 'var(--border-line)' }}>
-                <div className="flex items-center justify-between px-3.5 py-2" style={{ background: 'var(--bg-surface)', borderBottom: '1px solid var(--border-line)' }}>
-                  <h4 className="text-[11px] font-bold text-[var(--fg-accent)] uppercase tracking-[0.08em] font-mono flex items-center gap-1.5">
-                    <Terminal className="w-3 h-3" />
-                    Template Pronto
+              <div className="mt-4 rounded-lg border overflow-hidden" style={{ borderColor: 'rgba(168,85,247,0.3)' }}>
+                <div className="flex items-center justify-between px-3.5 py-2.5" style={{
+                  background: 'linear-gradient(135deg, rgba(168,85,247,0.12), rgba(66,133,244,0.08))',
+                  borderBottom: '1px solid rgba(168,85,247,0.2)',
+                }}>
+                  <h4 className="text-[11px] font-bold uppercase tracking-[0.08em] font-mono flex items-center gap-1.5" style={{ color: '#a855f7' }}>
+                    <Sparkles className="w-3 h-3" />
+                    Prompt Pronto — Copie e Use
                   </h4>
                   <CopyButton text={card.prompt} />
                 </div>
@@ -608,25 +634,31 @@ export function ExpandableCard({ card, isOpen, onToggle }: ExpandableCardProps) 
 
             {/* -- Links -- */}
             {card.links && card.links.length > 0 && (
-              <div className="mt-4 flex flex-wrap gap-2">
-                {card.links.map((link, i) => (
-                  <a
-                    key={i}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 no-underline border hover:border-[var(--border-accent)] hover:text-[var(--fg-accent)] hover:bg-[var(--bg-accent-subtle)]"
-                    style={{
-                      borderColor: 'var(--border-line)',
-                      color: 'var(--fg-secondary)',
-                      background: 'var(--bg-surface)',
-                    }}
-                  >
-                    <ExternalLink className="w-3 h-3" />
-                    {link.label}
-                    <ArrowRight className="w-3 h-3 opacity-50" />
-                  </a>
-                ))}
+              <div className="mt-4 rounded-lg p-3 border" style={{ background: 'var(--bg-surface)', borderColor: 'var(--border-line)' }}>
+                <h4 className="text-[11px] font-bold text-[var(--fg-accent)] uppercase tracking-[0.08em] mb-2.5 font-mono flex items-center gap-1.5">
+                  <ExternalLink className="w-3 h-3" />
+                  Links Uteis
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {card.links.map((link, i) => (
+                    <a
+                      key={i}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 no-underline border hover:border-[var(--border-accent)] hover:text-[var(--fg-accent)] hover:bg-[var(--bg-accent-subtle)]"
+                      style={{
+                        borderColor: 'var(--border-line)',
+                        color: 'var(--fg-secondary)',
+                        background: 'var(--bg-card)',
+                      }}
+                    >
+                      <ExternalLink className="w-3 h-3 text-[var(--fg-accent)]" />
+                      {link.label}
+                      <ArrowRight className="w-3 h-3 opacity-50" />
+                    </a>
+                  ))}
+                </div>
               </div>
             )}
           </div>
